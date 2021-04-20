@@ -1,0 +1,417 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+.linha, .coluna, .linha_grande{
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+}
+.linha_grande{
+	width: 1339px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 5px 0;
+}
+/* grid 960px */
+.linha{
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 5px 0;
+}
+.coluna{
+	padding: 0 10px;
+	float: left;
+}
+h1, h2, h3, h5, h6{
+	font-weight: 400;
+	margin: 15px 0 10px 0;
+}
+.header{
+	background: #0F2620;
+	margin-top: 0;
+	padding-bottom: 10px;
+	max-height: auto;
+}
+.header h1{
+	margin-left: 330px;
+}
+.header img{
+	width: 300px;
+}
+ul li, ol li{
+	margin-bottom: 5px;
+}
+nav.inline li, ul.inline li, ol.inline li{
+	display: inline;
+	margin-right: 15px;
+}
+nav.inline li:last-child, ul.inline li:last-child, ol.inline li:last-child{
+	margin-right: 0;
+}
+/* menu */
+.barra{
+	display: none;
+}
+.barra(max-width: 361px){
+	display: block;
+}
+.selo{
+	display: none;
+}
+.selo(max-width: 361px){
+	display: block;
+}
+label[for="bt_menu"]{
+	padding: 5px;
+	background: #0F2620;
+	color: #C6A685;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	width: 50px
+	height: 50px;
+	float: right;
+	margin-top: -60px;
+	margin-right: 250px;
+}
+#bt_menu{
+	display: none;
+}
+label[for="bt_menu"]{
+	display: none;
+}
+@media(max-width: 1339px){
+	label[for="bt_menu"]{
+	display: block;
+	}
+
+	#bt_menu:checked ~ .menu{
+		margin-left: 0;
+		display: flex;
+	}
+
+.menu a{
+	padding: 5px 10px;
+	text-decoration: none;
+	text-align: center;
+	color: #C6A685;
+	display: block;
+}
+.menu li a:hover{
+	text-decoration: none;
+	text-decoration: underline;
+	color: #C6A685;
+}
+	.menu{
+		margin-top: 5px;
+		display: none;
+		font-weight: 400;
+		font-size: 25px;
+		text-transform: uppercase;
+	}
+	.menu ul li{
+		width: 100%;
+		float: right;
+	}
+	.menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+
+
+		visibility: hidden;
+		text-align: center;
+		align-items: center;
+		padding: 0;
+	}
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 200px;
+
+		visibility: visible;
+	}
+}
+.disc a:after{
+	content: " ";
+	font-size: 5px;
+	margin-right: 0;
+	margin-left: 30px;
+}
+
+/* fim do menu */
+.footer{
+	background: #0F2620;
+	color: #C6A685;
+	padding: 10px 0;
+	text-align: center;
+	font-weight: 100;
+	font-size: 20px;
+}
+/* banner rotativo */
+.texto{
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+}
+.texto p{
+	background-color: rgba(29, 82, 68, 0.7);
+	padding: 20px;
+}
+.foto{
+	display: none;
+}
+.foto(max-width: 321px){
+	display: block;
+}
+.galeria{
+  margin: 0;
+  background-image: url("../img/banner/persiana banner.jpg");
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.galeria img{
+	width: 100%;
+}
+.foto{
+  opacity: 0;
+  animation-name: animacao;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+@keyframes animacao{
+  25%{
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+  50%{
+    opacity: 0;
+  }
+}
+.foto:nth-child(1){
+
+}
+.foto:nth-child(2){
+  animation-delay: 5s;
+}
+.foto:nth-child(3){
+  animation-delay: 10s;
+}
+/* fim do banner */
+/* início solicite */
+.fundo{
+	background: #C6A685;
+}
+.solicite h3{
+  color: #0F2620;
+  font-size: 40px;
+  text-align: center;
+}
+.solicite li{
+	margin: 30px 0 30px 0;
+	list-style: none;
+	text-align: center;
+}
+.solicite a{
+  text-decoration: none;
+  font-size: 30px;
+  padding: 15px;
+  background: #0F2620;
+  color: #C6A685;
+  border-radius: 25px;
+}
+.solicite a:hover{
+	text-decoration: underline;
+}
+/* fim solicite */
+/* início resumo */
+.resumo{
+	background: #dcecbf;
+}
+.resumo h2{
+	font-size: 40px;
+	text-align: center;
+}
+.quadros{
+	margin-left: 100px;
+}
+.design h4, .fabricacao h4, .reforma h4{
+  font-weight: 600;
+  font-size: 37px;
+  color: #0F2620;
+}
+.design, .fabricacao, .reforma{
+  width: 700px;
+  border-style: black;
+  font-size: 30px;
+  color: #0F2620;
+  border-radius: 25px;
+  border: 1px solid #dcecbf;
+  margin: 5px 10px 5px 10px;
+  margin-right: 30px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.design a, .fabricacao a, .reforma a{
+  text-decoration: none;
+  color: #0F2620;
+}
+.design a:hover, .fabricacao a:hover, .reforma a:hover{
+  text-decoration: underline;
+}
+.design:hover, .fabricacao:hover, .reforma:hover{
+	border: 1px solid black;
+}
+/* fim resumo */
+/* início contato */
+.contato h3, .contato h2{
+	text-align: center;
+	color: #0F2620;
+	font-weight: 600;
+	font-size: 30px;
+}
+.contato iframe{
+	 width: 800px; 
+	 height: 400px;
+	 margin-left: 60px;
+}
+.contato ul li{
+	font-size: 22px;
+	margin-left: 60px;
+	line-height: 1.5;
+}
+.contato label{
+	display: block;
+	margin-left: 60px;
+	font-size: 18px;
+	font-weight: 300;
+}
+.contato input, .contato textarea{
+	display: block;
+	margin-bottom: 15px;
+	margin-left: 60px;
+	padding: 5px 2%;
+	width: 750px;
+}
+.contato textarea{
+	height: 150px;
+}
+.contato input.botao{
+	width: auto;
+}
+.fixo{
+	margin-left: 60px;
+}
+ul.sem-marcador{
+	list-style: none;
+}
+.sem-padding{
+	padding: 0 !important;
+}
+.botao{
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  background: #C6A685;
+  color: #0F2620;
+  border-radius: 25px;
+}
+.botao:hover{
+	text-decoration: underline;
+}
+/* fim contato */
+.sobre h2, .sobre h3{
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	color: #b7d97d;
+}
+/* lightbox - abrir janela sobre a página (janela modal) */
+/* seta direita &#187 | seta esquerda &#171 */
+.lbox{
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+.verdinho{
+	background: #dcecbf;
+
+}
+.sobre_galeria h2, .sobre_galeria h3{
+	font-weight: 600;
+	font-size: 40px;
+	text-align: center;
+	color: #0F2620;
+}
+.portfolio ul{
+	text-align: center;
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding-left: 0;
+}
+.portfolio ul li{
+	margin: 10px;
+}
+.portfolio ul li:last-child{
+	margin-right: 0;
+}
+.mini{
+	width: 600px;
+	padding: 10px;
+	border: 5px solid #0F2620;
+}
+.min{
+	border: 5px solid #C6A685;
+}
+
+.lbox{
+	overflow: hidden; 
+	display: none;
+}
+
+/* fim da lightbox */
+/* início clientes */
+.clientes{
+	width: 800px;
+	text-align: center;
+	padding: 30px 0 30px 0;
+	margin: 20px;
+	margin-left: 60px;
+	border: 3px solid #C6A685;
+}
+.clientes img{
+	width: 50%;
+}
+/* fim clientes */
+/* início sobre */
+.sobre h2, .sobre h3{
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	color: #0F2620;
+}
+.sobre{
+	width: 800px;
+	text-align: justify;
+	line-height: 1.5;
+	padding: 33px;
+	margin: 15px 15px 15px 40px;
+	border: 2px solid #C6A685;
+	font-size: 25px;
+}
+/* fim sobre */
+.fixo img{
+	border-radius: 25px;
+}
+.fixo{
+	float: left;
+}
